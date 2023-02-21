@@ -22,12 +22,12 @@ const Home = () => {
               <div className="flex -mx-5 overflow-x-scroll snap-x scrollbar-hide">
                 {productsInfo.filter(p => p.categories[0].name === categoryName).map(productInfo => (
                   <div className="px-5 snap-start" key={productInfo.id}>
-                    <div className="w-52 px-5 flex flex-col">
+                    <div className="w-52 flex flex-col">
                       <div className="bg-blue-100 p-5 rounded-xl">
                         <img src={productInfo.image.url} alt={productInfo.name}/>
                       </div>
                       <div className="mt-2">
-                        <h3 className="font-bold text-lg capitalize">{productInfo.name}</h3>
+                        <h3 className="font-bold capitalize">{productInfo.name}</h3>
                       </div>
                       <div className='text-sm mt-1 leading-4 text-gray-500 h-20 overflow-scroll'>
                        <div dangerouslySetInnerHTML={{ __html: productInfo.description }} />
